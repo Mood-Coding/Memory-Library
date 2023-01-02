@@ -21,6 +21,8 @@
     <ClInclude Include="Process\ProcessCore.h">
       <Filter>Process</Filter>
     </ClInclude>
-    <ClInclude Include="Process\Process.h" />
+    <ClInclude Include="Process\Process.h">
+      <Filter>Process</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

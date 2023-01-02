@@ -9,8 +9,8 @@ namespace Memory::Process
 	/// Retrieves the base address of a module in a process
 	/// with a given process ID and module name.
 	/// </summary>
-	/// <param name="pid">PID</param>
-	/// <param name="module_name">Module need to retrieve base address</param>
+	/// <param name="pid">Target process ID</param>
+	/// <param name="module_name">Module will be retrieved base address</param>
 	/// <returns>Base address of module</returns>
 	uintptr_t GetModuleBaseAddress( DWORD pid, const wchar_t* module_name );
 }

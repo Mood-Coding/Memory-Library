@@ -8,9 +8,7 @@ uintptr_t Memory::Process::GetModuleBaseAddress( DWORD pid, const wchar_t* modul
 	HANDLE hSnap = CreateToolhelp32Snapshot( TH32CS_SNAPMODULE | TH32CS_SNAPMODULE32, pid );
 	if (hSnap == INVALID_HANDLE_VALUE)
 	{
-#if _DEBUG
-		std::cout << "[!] [Memory::Process::GetModuleBaseAddress] CreateToolhelp32Snapshot " << GetLastError() << '\n';
-#endif // _DEBUG
+		std::cerr << "[!] [Memory::Process::GetModuleBaseAddress] CreateToolhelp32Snapshot " << GetLastError() << '\n';
 		return 0;
 	}
 
@@ -22,8 +20,9 @@ uintptr_t Memory::Process::GetModuleBaseAddress( DWORD pid, const wchar_t* modul
 	{
 		do
 		{
-			// 0 mean string1 identical to string2
-			if (_wcsicmp( modEntry.szModule, module_name ) == 0)
+			// Find module with the name specified by module_name argument
+			// 0 means 2 strings are identical
+			if (_wcsicmp( modEntry.szModule, module_name ) == 0) 
 			{
 				moduleBaseAddress = (uintptr_t)modEntry.modBaseAddr;
 				break;
@@ -31,10 +30,9 @@ uintptr_t Memory::Process::GetModuleBaseAddress( DWORD pid, const wchar_t* modul
 		}
 		while (Module32Next( hSnap, &modEntry ));
 	}
+	else
 	{
-#if _DEBUG
-		std::cout << "[!] [Memory::Process::GetProcessID] Module32First " << GetLastError() << '\n';
-#endif // _DEBUG
+		std::cerr << "[!] [Memory::Process::GetModuleBaseAddress] Module32First " << GetLastError() << '\n';
 	}
 
 	CloseHandle( hSnap );

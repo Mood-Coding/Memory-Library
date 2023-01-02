@@ -3,7 +3,7 @@
 #include <iostream>
 #include <Windows.h>
 
-DWORD Memory::Process::GetProcessID( const wchar_t* processName )
+DWORD Memory::Process::GetProcessID( const wchar_t* process_name )
 {
 	HANDLE hSnap = CreateToolhelp32Snapshot( TH32CS_SNAPPROCESS, NULL );
 	if (hSnap == INVALID_HANDLE_VALUE)
@@ -22,8 +22,9 @@ DWORD Memory::Process::GetProcessID( const wchar_t* processName )
 	{
 		do
 		{
-			// 0 mean string1 identical to string2
-			if (_wcsicmp( pe.szExeFile, processName ) == 0)
+			// Find process with the name specified by process_name argument
+			// 0 means 2 strings are identical
+			if (_wcsicmp( pe.szExeFile, process_name ) == 0)
 			{
 				pid = pe.th32ProcessID;
 				break;
