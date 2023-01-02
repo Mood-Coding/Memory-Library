@@ -1,7 +1,7 @@
 #pragma once
 
-#ifndef MEMORYLIBRARY_H
+#ifndef MEMELIBRARY_H
 
 #include "Process/Process.h"
 
-#endif // !MEMORYLIBRARY_H
+#endif // !MEMELIBRARY_H
