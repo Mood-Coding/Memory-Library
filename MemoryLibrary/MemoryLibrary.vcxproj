@@ -24,6 +24,7 @@
     <ProjectGuid>{a7ca166e-76fa-4500-96f2-eb2fa0b3e2a6}</ProjectGuid>
     <RootNamespace>MemoryLibrary</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>MemeLibrary</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -141,12 +142,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Process\ProcessMemory.h" />
     <ClInclude Include="Process\Process.h" />
     <ClInclude Include="Process\ProcessCore.h" />
     <ClInclude Include="Process\ProcessModules.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MemoryLibrary.h" />
+    <ClCompile Include="MemeLibrary.h" />
+    <ClCompile Include="Process\ProcessMemory.cpp" />
     <ClCompile Include="Process\ProcessCore.cpp" />
     <ClCompile Include="Process\ProcessModules.cpp" />
   </ItemGroup>

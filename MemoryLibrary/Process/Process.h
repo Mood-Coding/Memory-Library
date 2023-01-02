@@ -4,5 +4,6 @@
 
 #include "ProcessModules.h"
 #include "ProcessCore.h"
+#include "ProcessMemory.h"
 
 #endif // !PROCESS_H

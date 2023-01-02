@@ -3,13 +3,13 @@
 #include <iostream>
 #include <Windows.h>
 
-DWORD Memory::Process::GetProcessID( const wchar_t* process_name )
+DWORD Meme::Process::GetProcessID( const wchar_t* process_name )
 {
 	HANDLE hSnap = CreateToolhelp32Snapshot( TH32CS_SNAPPROCESS, NULL );
 	if (hSnap == INVALID_HANDLE_VALUE)
 	{
 #if _DEBUG
-		std::cout << "[!] [Memory::Process::GetProcessID] CreateToolhelp32Snapshot " << GetLastError() << '\n';
+		std::cout << "[!] [Meme::Process::GetProcessID] CreateToolhelp32Snapshot " << GetLastError() << '\n';
 #endif // _DEBUG
 		return 0;
 	}
@@ -35,7 +35,7 @@ DWORD Memory::Process::GetProcessID( const wchar_t* process_name )
 	else
 	{
 #if _DEBUG
-		std::cout << "[!] [Memory::Process::GetProcessID] Process32First " << GetLastError() << '\n';
+		std::cout << "[!] [Meme::Process::GetProcessID] Process32First " << GetLastError() << '\n';
 #endif // _DEBUG
 	}
 

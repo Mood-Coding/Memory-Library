@@ -3,7 +3,7 @@
 
 #ifndef PROCESSCORE_H
 
-namespace Memory::Process
+namespace Meme::Process
 {
 	/// <summary>
 	/// Retrieve PID of a process with a given executable name

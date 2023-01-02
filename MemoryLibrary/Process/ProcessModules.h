@@ -3,7 +3,7 @@
 
 #ifndef PROCESSMODULES_H
 
-namespace Memory::Process
+namespace Meme::Process
 {
 	/// <summary>
 	/// Retrieves the base address of a module in a process

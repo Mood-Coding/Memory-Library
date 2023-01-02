@@ -9,8 +9,11 @@
     <ClCompile Include="Process\ProcessModules.cpp">
       <Filter>Process</Filter>
     </ClCompile>
-    <ClCompile Include="MemoryLibrary.h" />
+    <ClCompile Include="MemeLibrary.h" />
     <ClCompile Include="Process\ProcessCore.cpp">
+      <Filter>Process</Filter>
+    </ClCompile>
+    <ClCompile Include="Process\ProcessMemory.cpp">
       <Filter>Process</Filter>
     </ClCompile>
   </ItemGroup>
@@ -22,6 +25,9 @@
       <Filter>Process</Filter>
     </ClInclude>
     <ClInclude Include="Process\Process.h">
+      <Filter>Process</Filter>
+    </ClInclude>
+    <ClInclude Include="Process\ProcessMemory.h">
       <Filter>Process</Filter>
     </ClInclude>
   </ItemGroup>
