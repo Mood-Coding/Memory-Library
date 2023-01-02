@@ -24,6 +24,7 @@
     <ProjectGuid>{65dee6d1-7c96-4622-8290-bf73dcc9272a}</ProjectGuid>
     <RootNamespace>TestMemoryLibrary</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>TestMemeLibrary</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -139,7 +140,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="TestMemoryLibrary.cpp" />
+    <ClCompile Include="TestMemeLibrary.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MemoryLibrary\MemoryLibrary.vcxproj">

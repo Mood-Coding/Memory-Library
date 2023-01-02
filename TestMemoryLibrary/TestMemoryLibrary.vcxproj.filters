@@ -10,7 +10,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TestMemoryLibrary.cpp">
+    <ClCompile Include="TestMemeLibrary.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
